@@ -51,7 +51,7 @@ nav img {
 }
 .header-content {
 	display: flex;
-	/*position: relative;*/
+	position: relative;
 	/*width: 90%;*/
 	align-items: center;
 	padding: 2% 6%;
@@ -69,18 +69,107 @@ nav img {
 	color: #0054A9;
 	font-size: 36px;
 }
+.text-content button {
+	background-color: #0054A9;
+	color: #FFFFFF;
+	font-size: 18px;
+	width: 163px;
+	height: 50px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.text-content button:hover {
+	border: 1px solid #FFFFFF;
+}
 .header-img img {
 	width: 400px;
 }
+
+nav .fa {
+	display: none;
+}
+
+@media(max-width: 700px) {
+	.header-content {
+		flex-direction: column;
+		align-items: center;
+		display: absolute;
+		top: 100px;
+		right: s0px;
+	}
+	.text-content {
+		padding: 0;
+		display: block;
+	}
+	.text-content h2 {
+		color: #0054A9;
+		font-size: 36px;
+		margin: 15px;
+	}
+	.header-img {
+		display: none;	
+	}
+	.text-content p {
+		color: #787878;
+		font-size: 21px;
+		line-height: 31.6px;
+		padding: 0px 15px;
+	}
+	.nav-links ul li {
+		display: block;
+	}
+	.nav-links{
+		position: absolute;
+		background: #0054A9;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+	}
+	.nav-links ul li a {
+		color: #FFFFFF;
+	}
+	nav .fa {
+		display: block;
+		color: #FFFFFF;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	nav .fa-bars {
+		color: #0054A9;
+		font-size: 26px;
+	}
+
+	.nav-links ul {
+		padding: 30px;
+	}
+}
+
 .about-us {
 	display: flex;
 	position: relative;
 	background-color: #FAFAFA;
+	margin: auto;
 	padding: 5%;
 	justify-content: center;
 }
 .section-one {
 	flex: 1;
+}
+.section-one p {
+	padding-right: 40px;
+	padding-top: 10px;
+	font-size: 21px;
+	line-height: 31.6px;
+}
+.section-one h2 {
+	color: #0054A9;
+	font-size: 36px;
+	margin-bottom: 20px;
 }
 .section-two {
 	flex: 2;
@@ -90,4 +179,29 @@ nav img {
 }
 .section-two .about-item {
 	flex-basis: 48%;
+}
+
+.section-two .about-item .box-header {
+	color: #0054A9;
+	font-size: 18px;
+	line-height: 17.46px;
+	margin-top: 10px;
+}
+.section-two .about-item .box-content {
+	color: #505050;
+	font-size: 18px;
+	line-height: 31.6px;
+	margin: 10px 30px 0px 0px;
+	margin-bottom: 10px;
+	margin-right: 50px;
+}
+
+@media(max-width: 700px) {
+	.about-us {
+		flex-direction: column;
+	}
+	.section-two {
+		flex-direction: column;
+		margin: 20px;
+	}
 }
